@@ -15,7 +15,7 @@ class StudentsController < ApplicationController
 
   def create
     binding.pry
-    session[:form_params] = params.inspect
+    @student = Student.create(params["student"])
     redirect_to new_student_path
   end
 
