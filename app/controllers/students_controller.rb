@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.create(params["student"]["first_name"], params["student"["last_name"]])
+    @student = Student.create(params["student"]["first_name"], params["student"]["last_name"])
     redirect_to new_student_path
   end
 
